@@ -5,7 +5,16 @@ const std::string& getProgramName(){
     return str;
 }
 
+int& getIntValue(){
+    static int n = 10;
+    ++n;
+    return n;
+}
 int main(){
     std::cout << "Program name is : " << getProgramName();
+    int n1 = getIntValue();
+    int& n = getIntValue();
+    std::cout << n1 << std::endl;
+    std::cout << n << std::endl;
     return 0;
 }
