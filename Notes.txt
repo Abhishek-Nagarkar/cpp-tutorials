@@ -1,2 +1,11 @@
 Pass by Value and Return by Value ==> New variable is created which is 
 cheap to copy if it is of primitive type (expensive for class type)
+
+Eg. std::string returnByValue();
+expensive since copy of string will be created and returned to the caller
+
+To resolve this issue : Pass by (const) reference or pass by address
+
+Keep in mind -> when returning by reference make sure the object is not bound 
+to function scope
+
